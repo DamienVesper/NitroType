@@ -1,5 +1,5 @@
 # NitroType GET Requests
-A convenient bookmarklet that sends HTTP GET Requests to the Nitro Type API (via Ajax) with just a couple clicks.
+A convenient bookmarklet that requests data from the Nitro Type API.
 
 # Installation
 Copy and paste the code below into the URL section of a new bookmark.
