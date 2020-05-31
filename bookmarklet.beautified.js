@@ -19,7 +19,7 @@ javascript:(function(){
   
       <select name="url-input" id="url-input">
         
-	      <optgroup label="Authentication">
+			<optgroup label="Authentication">
 	        <option value="https://www.nitrotype.com/api/auth/facebook">
             */auth/facebook
           </option>
