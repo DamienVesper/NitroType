@@ -35,6 +35,9 @@ javascript:(function(){
 	  <option value="https://www.nitrotype.com/api/friends">
             */friends
           </option>
+	  <option value="https://www.nitrotype.com/api/friend-requests">
+	    */friend-requests
+	  </option>
 	</optgroup>
   
 	<optgroup label="News">
