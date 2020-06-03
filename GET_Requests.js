@@ -1,14 +1,14 @@
-javascript:(function(){
+(function(){
   
-  var elem='
-    <div id="bookmarklet" style="
-      position: fixed;
-      background: #FFF; 
-      border: 1px #000 solid; 
-      right: 50px; 
-      top: 50px; 
-      z-index: 1000; 
-      width: 250px;
+  var elem=`
+    <div id="bookmarklet" style="\
+      position: fixed; \
+      background: #FFF; \
+      border: 1px #000 solid; \
+      right: 50px; \
+      top: 50px; \
+      z-index: 1000; \
+      width: 250px; \
     ">
   
     <form>
@@ -19,59 +19,59 @@ javascript:(function(){
   
       <select name="url-input" id="url-input">
         
-	<optgroup label="Authentication">
-	  <option value="https://www.nitrotype.com/api/auth/facebook">
+    <optgroup label="Authentication">
+      <option value="https://www.nitrotype.com/api/auth/facebook">
             */auth/facebook
           </option>
-	</optgroup>
+    </optgroup>
   
-	<optgroup label="Classes">
-	  <option value="https://www.nitrotype.com/api/classes">
+    <optgroup label="Classes">
+      <option value="https://www.nitrotype.com/api/classes">
             */classes
           </option>
-	</optgroup>
-	    
+    </optgroup>
+        
         <optgroup label="Friends">
-	  <option value="https://www.nitrotype.com/api/friends">
+      <option value="https://www.nitrotype.com/api/friends">
             */friends
           </option>
-	  <option value="https://www.nitrotype.com/api/friend-requests">
-	    */friend-requests
-	  </option>
-	</optgroup>
+      <option value="https://www.nitrotype.com/api/friend-requests">
+        */friend-requests
+      </option>
+    </optgroup>
   
-	<optgroup label="News">
-	  <option value="https://www.nitrotype.com/api/news">
+    <optgroup label="News">
+      <option value="https://www.nitrotype.com/api/news">
             */news
           </option>
-	</optgroup>
+    </optgroup>
   
-	<optgroup label="Purchase">
-	  <option value="https://www.nitrotype.com/api/purchase/refreshsession">
+    <optgroup label="Purchase">
+      <option value="https://www.nitrotype.com/api/purchase/refreshsession">
             */purchase/refreshsession
           </option>
-	</optgroup>
-	
+    </optgroup>
+    
         <optgroup label="Referrals">
-	  <option value="https://www.nitrotype.com/api/referrals">
+      <option value="https://www.nitrotype.com/api/referrals">
             */referrals
           </option>
-	</optgroup>       
+    </optgroup>       
   
-	<optgroup label="Settings">
-	  <option value="https://www.nitrotype.com/api/settings">
+    <optgroup label="Settings">
+      <option value="https://www.nitrotype.com/api/settings">
             */settings
           </option>
-	</optgroup>
-	
+    </optgroup>
+    
         <optgroup label="Stats">
           <option value="https://www.nitrotype.com/api/stats/summary">
            */stats/summary
           </option>
-	  <option value="https://www.nitrotype.com/api/stats/graphs/bymonth">
+      <option value="https://www.nitrotype.com/api/stats/graphs/bymonth">
             */stats/graphs/bymonth
           </option>
-       	  <option value="https://www.nitrotype.com/api/stats/graphs/lastdays">
+          <option value="https://www.nitrotype.com/api/stats/graphs/lastdays">
             */stats/graphs/lastdays
           </option>
           <option value="https://www.nitrotype.com/api/stats/graphs/racelog">
@@ -80,19 +80,19 @@ javascript:(function(){
           <option value="https://www.nitrotype.com/api/stats/data/bymonth">
             */stats/data/bymonth
           </option>
-	  <option value="https://www.nitrotype.com/api/stats/data/lastdays">
+      <option value="https://www.nitrotype.com/api/stats/data/lastdays">
             */stats/data/lastdays
           </option>
-	  <option value="https://www.nitrotype.com/api/stats/data/racelog">
+      <option value="https://www.nitrotype.com/api/stats/data/racelog">
             */stats/data/racelog
           </option>
         </optgroup>
-	   
+       
         <optgroup label="Teams">
-	  <option value="https://www.nitrotype.com/api/teams/applications">
+      <option value="https://www.nitrotype.com/api/teams/applications">
             */teams/applications
           </option>
-	</optgroup>
+    </optgroup>
   
       </select>
   
@@ -105,7 +105,7 @@ javascript:(function(){
       </button>
   
     </form>
-    </div>';
+    </div>`;
     
   document.body.innerHTML += elem;
   document.getElementById('add-tag').addEventListener("click", function () {
