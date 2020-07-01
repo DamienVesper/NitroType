@@ -1,14 +1,14 @@
 (function(){
   
   var elem=`
-    <div id="bookmarklet" style="\
-      position: fixed; \
-      background: #FFF; \
-      border: 1px #000 solid; \
-      right: 50px; \
-      top: 50px; \
-      z-index: 1000; \
-      width: 250px; \
+    <div id="bookmarklet" style="
+      position: fixed; 
+      background: #FFF; 
+      border: 1px #000 solid; 
+      right: 50px; 
+      top: 50px; 
+      z-index: 1000; 
+      width: 250px; 
     ">
   
     <form>
