@@ -55,6 +55,6 @@ The endpoints below are prepended by the base API URL: `https://www.nitrotype.co
 ## Compatibility
 Browser | Supported
 --------|------------
-Chrome |     ✓
-Firefox|     ✓
-Safari |     ✗
+Chrome  |     ✓
+Firefox |     ✓
+Safari  |     ✓
