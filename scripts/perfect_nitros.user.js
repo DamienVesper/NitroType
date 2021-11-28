@@ -16,6 +16,11 @@
      
 **********************************************/
 
+/* 
+ *  Unresolved Issue: Userscript does not
+ *  work in friend races #1 (@GoodGradesBoy)
+ */  
+
 const options = {
     highlightColor: '#ffff00',
     intervalMs: 100
