@@ -1,25 +1,18 @@
 // ==UserScript==
 // @name         NitroType Perfect Nitros
 // @namespace    https://github.com/Ray-Adams
-// @version      1.0.0
+// @version      1.0.2
 // @description  Highlights the largest words for perfect nitros.
 // @author       Ray Adams
-// @match        *://www.nitrotype.com/race
+// @match        *://*.nitrotype.com/race
+// @match        *://*.nitrotype.com/race/*
 // @run-at       document-end
 // @grant        none
+// @license      MIT
+// @homepageURL  https://github.com/Ray-Adams/NitroType-Archive
 // ==/UserScript==
 
-/**********************************************
-
-      Ray-Adams/NitroType-Perfect-Nitros
-     Feb 15, 2020 - Updated Feb 19, 2021
-     
-**********************************************/
-
-/* 
- *  Unresolved Issue: Userscript does not
- *  work in friend races #1 (@GoodGradesBoy)
- */  
+console.log("'NitroType Perfect Nitros' is no longer maintained, see https://github.com/Ray-Adams/NitroType-Archive for more info.");
 
 const options = {
     highlightColor: '#ffff00',
@@ -77,7 +70,6 @@ const options = {
 
     }
 
-    // !!! --- Refactor with MutationObserver API --- !!!
     const intervalId = setInterval(client, options.intervalMs);
 
     console.info('Perfect Nitros Activated.')
