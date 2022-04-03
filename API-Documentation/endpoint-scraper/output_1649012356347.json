@@ -1,0 +1,327 @@
+{
+	"/api/v2/NEEDS_URL": {
+		"samples": [
+			"o:return l(e,t.payload)}return e},p=n(2),f=function(e,t,n){return function(r){var o={raceId:e,rating:t,metadata:n};p.b.mock(\"/api/v2/NEEDS_URL\",{method:\"post\",params:o,apiScope:\"sendRaceFeedback\",success:!0,response:{success:!0}},r)}},d=function(e){r"
+		]
+	},
+	"/api/v2/achievements/check": {
+		"samples": [
+			"ementsCheck()),console.warn(\"error verifying extra tier achievement\",e)}))}},C=function(e){return function(t,n){Object(E.b)(\"/api/v2/achievements/check\",{method:\"post\",params:{ids:e}},(function(){return null})).then((function(e){var r=e.user||{},o=[]"
+		]
+	},
+	"/api/v2/achievements/claim/": {
+		"samples": [
+			"NT_CLAIMED_ACHIEVEMENT:return b(e,t.payload)}return e},E=n(2),O=n(9),S=n(16),_=function(e){return function(t,n){Object(E.b)(\"/api/v2/achievements/claim/\".concat(e.achievementID),{method:\"get\",apiScope:\"claimAchievement\"},t).then((function(){t(functio"
+		]
+	},
+	"/api/v2/achievements/extra": {
+		"samples": [
+			"T))})).catch((function(e){console.error(\"Error claiming achievement\",e)}))}},T=function(e){return function(t,n){Object(E.b)(\"/api/v2/achievements/extra\",{method:\"post\",params:{id:e}}).then((function(r){var o,a=I.parseAchievements(null===(o=n().global"
+		]
+	},
+	"/api/v2/auth/class-login/": {
+		"samples": [
+			"u(e))}),(function(e){null!=e&&e.redirect&&window.__navigateTo(e.redirect)}))}},w=function(e){return function(t){Object(f.b)(\"/api/v2/auth/class-login/\"+e,{method:\"post\",params:{sectionID:e},apiScope:\"logInToClass\"},t).then((function(e){t({type:c,payl"
+		]
+	},
+	"/api/v2/auth/cross-site/": {
+		"samples": [
+			"utomatically logged into \",e.props.sites[t.data.app],\".\"),buttonText:\"Go to \".concat(e.props.sites[t.data.app]),destination:\"/api/v2/auth/cross-site/\".concat(t.data.app,\"?redirect=\")+encodeURI(\"/\".concat(i,\"/\").concat(t.data.username))+\"&token=\"+loca"
+		]
+	},
+	"/api/v2/auth/login/": {
+		"samples": [
+			"(o={qualifying:1,avgSpeed:a.avgSpeed,avgAcc:a.avgAcc,carID:a.carID,raceSounds:a.raceSounds}),t.tz=Object(f.l)(),Object(f.b)(\"/api/v2/auth/login/\".concat(e),{method:\"post\",params:y(y({},t),o),apiScope:\"login\"},n).then((function(e){n(u(e))}),(function("
+		]
+	},
+	"/api/v2/auth/login/username": {
+		"samples": [
+			"umerable:!0,configurable:!0,writable:!0}):e[t]=n,e}var v=function(e,t,n){return function(r){var o=Object(f.l)();Object(f.b)(\"/api/v2/auth/login/username\",{method:\"post\",params:{username:e,password:t,captchaToken:n,tz:o},apiScope:\"login\"},r).then((fun"
+		]
+	},
+	"/api/v2/auth/redirect/": {
+		"samples": [
+			"3?\"B\":e>=80?\"B-\":e>=77?\"C+\":e>=73?\"C\":e>=70?\"C-\":e>=67?\"D+\":e>=63?\"D\":e>=60?\"D-\":\"F\"},C=function(e){N(),window.__navigateTo(\"/api/v2/auth/redirect/\"+e)},N=function(){o.a.set(\"state\",\"\",R({expires:0}));var e=o.a.get(\"state\");return e||(e=Object(m.m)(1"
+		]
+	},
+	"/api/v2/auth/register/username": {
+		"samples": [
+			"fyingRaceComplete&&(i={qualifying:1,avgSpeed:c.avgSpeed,avgAcc:c.avgAcc,carID:c.carID,raceSounds:c.raceSounds}),Object(f.b)(\"/api/v2/auth/register/username\",{method:\"post\",params:y({username:e,password:t,email:n,acceptPolicy:\"on\",receiveContact:o?\"on"
+		]
+	},
+	"/api/v2/auth/reset-password": {
+		"samples": [
+			"t(\"authentication\",\"signup\",\"username\",null,!0)}),(function(){return null}))}},S=function(e){return function(t){Object(f.b)(\"/api/v2/auth/reset-password\",{method:\"post\",params:{email:e},apiScope:\"forgotPassword\"},t).then((function(){return null}),(fu"
+		]
+	},
+	"/api/v2/auth/reset-password/change": {
+		"samples": [
+			"rguments.length>0&&void 0!==arguments[0]?arguments[0]:o;return e},i=n(2),s=function(e,t,n,r){return function(o){Object(i.b)(\"/api/v2/auth/reset-password/change\",{method:\"post\",apiScope:\"resetPassword\",params:{newPassword:e,newPassword2:t,userID:n,has"
+		]
+	},
+	"/api/v2/auth/validate-captcha": {
+		"samples": [
+			"orgotPassword\"},t).then((function(){return null}),(function(){return null}))}},_=function(e){return function(t){Object(f.b)(\"/api/v2/auth/validate-captcha\",{method:\"post\",params:{token:e},apiScope:\"validateCaptcha\"},t).then((function(e){t(m.b.captcha"
+		]
+	},
+	"/api/v2/auth/validate-email": {
+		"samples": [
+			"bject(Le.i)()),n(xe.y(e))}},ze=function(e){return function(t){t(xe.x(e))}},Ye=function(e,t){return function(n){Object(Le.b)(\"/api/v2/auth/validate-email\",{method:\"post\",params:{hash:e,userID:t},apiScope:\"validateEmail\"},n).then((function(){n(xe.q())}"
+		]
+	},
+	"/api/v2/classes": {
+		"samples": [
+			"var t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],r=t?\"/api/v2/classes\":\"/api/v2/teams/\".concat(e),o={};return n&&(o.isMember=1),function(e){Object(X.b)(r,{method:\"get\",params:o,ap"
+		]
+	},
+	"/api/v2/friend-requests": {
+		"samples": [
+			"t){return Object(U.x)(e.fields,t)}));t(x(n))}else t(x([]))}),(function(e){}))}},B=function(){return function(e){Object(L.b)(\"/api/v2/friend-requests\",{method:\"get\",apiScope:\"getRequests\"},e).then((function(t){var n;e((n=(null==t?void 0:t.requests)||["
+		]
+	},
+	"/api/v2/friend-requests/": {
+		"samples": [
+			"==t?void 0:t.requests)||[],{type:i,payload:n}))}),(function(){return null}))}},H=function(e){return function(t){Object(L.b)(\"/api/v2/friend-requests/\".concat(e.userID,\"/accept\"),{method:\"post\",apiScope:\"acceptRequest\"},t).then((function(n){t({type:c,",
+			"racesPlayed,\"friends-membership\":e.membership})}),(function(){return null}))}},q=function(e){return function(t){Object(L.b)(\"/api/v2/friend-requests/\".concat(e.userID,\"/deny\"),{method:\"post\",apiScope:\"ignoreRequest\"},t).then((function(){var n;t((n=e.",
+			"ment\",\"ignore all\",{\"friends-ignored-count\":e})}),(function(){return null}))}},z=function(e){return function(t){Object(L.b)(\"/api/v2/friend-requests/\".concat(e.userID,\"/request\"),{method:\"post\"}).then((function(){var n;t((n=e.userID,{type:s,payload:n"
+		]
+	},
+	"/api/v2/friend-requests/accept-all": {
+		"samples": [
+			"createdStamp,\"friends-account-banned\":e.status})}),(function(){return null}))}},V=function(){return function(e){Object(L.b)(\"/api/v2/friend-requests/accept-all\",{method:\"post\",apiScope:\"acceptAllRequests\"},e).then((function(t){var n;e((n=t.ids||[],{t"
+		]
+	},
+	"/api/v2/friend-requests/deny-all": {
+		"samples": [
+			"th,\"friends-ignored-count\":\"(page:undefined)\"})}),(function(){return null}))}},W=function(e){return function(t){Object(L.b)(\"/api/v2/friend-requests/deny-all\",{method:\"post\",apiScope:\"ignoreAllRequests\"},t).then((function(){t({type:f,payload:e}),M.a."
+		]
+	},
+	"/api/v2/friends": {
+		"samples": [
+			"y:return j(e)}return e},x=function(e){return{type:a,payload:e}},L=n(2),M=n(7),U=n(4),F=function(e){return function(t){var n=\"/api/v2/friends\";e&&(n+=\"?online=1\"),Object(L.b)(n,{method:\"get\",apiScope:\"getFriends\"},t).then((function(e){if(e.values){var"
+		]
+	},
+	"/api/v2/friends/": {
+		"samples": [
+			"cesPlayed,\"friends-membership\":e.membership})}),(function(){return null}))}},G=function(e){return function(t,n){Object(L.b)(\"/api/v2/friends/\".concat(e.userID),{method:\"delete\",apiScope:\"removeFriend\"},t).then((function(n){var r;t((r=e.userID,{type:l"
+		]
+	},
+	"/api/v2/leaderboards": {
+		"samples": [
+			"ar g=function(e,t,n,r){var o={board:e,time:t,grouping:n,seasonID:r};return function(e){var n=\"?time=\".concat(t);Object(d.b)(\"/api/v2/leaderboards\"+n,{method:\"get\"},e).then((function(t){e(f(h({data:t},o)))}),(function(t){e(f(h({data:t},o)))}))}};n(85)"
+		]
+	},
+	"/api/v2/loot/arrange-cars": {
+		"samples": [
+			"onsole.warn(t),e({type:s})}))}}),I=function(e,t){return function(n){var r=JSON.stringify(t)!==JSON.stringify(e);Object(S.b)(\"/api/v2/loot/arrange-cars\",{method:\"post\",params:{garage:e}},n).then((function(){n(function(e){return{type:u,payload:e}}(e)),"
+		]
+	},
+	"/api/v2/loot/dealership/": {
+		"samples": [
+			"ct.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}var p=n(2),f=function(e,t){var n=e.dlID?\"/api/v2/loot/dealership/\".concat(e.dlID,\"/buy\"):\"/api/v2/loot/shop/\".concat(e.srlID,\"/buy\");return function(e,r){Object(p.b)("
+		]
+	},
+	"/api/v2/loot/equip": {
+		"samples": [
+			"ault:return!(null!==(n=o.loot.find((function(t){return t.lootID===e.id})))&&void 0!==n&&n.equipped)}}))).length?Object(i.b)(\"/api/v2/loot/equip\",{method:\"post\",params:l(e),apiScope:\"equipLoot\"},t).then((function(){var r,o;t((r=e,o=n().globals.LOOT,{t"
+		]
+	},
+	"/api/v2/loot/shop/": {
+		"samples": [
+			"igurable:!0,writable:!0}):e[t]=n,e}var p=n(2),f=function(e,t){var n=e.dlID?\"/api/v2/loot/dealership/\".concat(e.dlID,\"/buy\"):\"/api/v2/loot/shop/\".concat(e.srlID,\"/buy\");return function(e,r){Object(p.b)(n,{method:\"post\",params:{password:t,accountType:r"
+		]
+	},
+	"/api/v2/news": {
+		"samples": [
+			"payload);case a:return p(e,t.payload)}return e},d=n(2),m=function(e){var t={};return e&&(t.limit=e),function(e){Object(d.b)(\"/api/v2/news\",{method:\"get\",apiScope:\"getNews\",params:t},e).then((function(t){e(function(e){return{type:o,payload:e}}(t))}),("
+		]
+	},
+	"/api/v2/news/": {
+		"samples": [
+			"(t){e(function(e){return{type:o,payload:e}}(t))}),(function(){return null}))}},h=function(e){return function(t){Object(d.b)(\"/api/v2/news/\".concat(e),{method:\"get\",apiScope:\"getNewsPost\"},t).then((function(e){t(function(e){return{type:a,payload:e}}(e"
+		]
+	},
+	"/api/v2/payments/create-session": {
+		"samples": [
+			"rn e},d=n(2),m=\"nitrotype/store/VALIDATE_USER_PRODUCT\",h=function(e,t,n){return function(r,o){var a=o().globals;Object(d.b)(\"/api/v2/payments/create-session\",{method:\"post\",params:{username:e,SKU:t,purchaseMethod:n},apiScope:\"beginPurchase\"},r).then("
+		]
+	},
+	"/api/v2/payments/products": {
+		"samples": [
+			"_VERSION}).redirectToCheckout({sessionId:e.sessionID})}),(function(){}))}},y=function(e,t){return function(n,r){Object(d.b)(\"/api/v2/payments/products\",{method:\"post\",params:{username:e,type:t},apiScope:\"validateUserProduct\"},n).then((function(e){n(f"
+		]
+	},
+	"/api/v2/payments/transaction/": {
+		"samples": [
+			"dateSoundPreferences\"},t).then((function(){}),(function(){return null}))}},Ve=function(e,t){return function(n){Object(Le.b)(\"/api/v2/payments/transaction/\".concat(e),{method:\"post\",params:{userID:t},apiScope:\"refreshUserSessionAfterStripePurchase\"},n"
+		]
+	},
+	"/api/v2/players/": {
+		"samples": [
+			"arrange cars\",r?\"changed\":\"unchanged\")}),(function(e){console.warn(e)}))}},R=function(e,t,n){return function(r){Object(S.b)(\"/api/v2/players/\".concat(e,\"/send-cash\"),{method:\"post\",params:{amount:t,password:n},apiScope:\"sendCash\"},r).then((function(e",
+			"roperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}var He=function(e){return function(){Object(Le.b)(\"/api/v2/players/\".concat(e,\"/report\"),{method:\"post\"},(function(){return null})).then((function(){return null}))}},qe=functio"
+		]
+	},
+	"/api/v2/players/receive-cash": {
+		"samples": [
+			"endCashSuccessful(e))}),(function(e){console.error(\"Cash sending error\",e)}))}},k=function(){return function(e){Object(S.b)(\"/api/v2/players/receive-cash\",{method:\"post\",apiScope:\"getPendingCashGifts\"},e).then((function(t){e(function(e){return{type:f"
+		]
+	},
+	"/api/v2/players/search": {
+		"samples": [
+			"yed,\"friends-membership\":e.membership},t)}),(function(e){console.error(e)}))}},Y=function(e){return function(t){Object(L.b)(\"/api/v2/players/search\",{method:\"post\",params:{term:e},apiScope:\"searchUsers\"},t).then((function(n){t({type:d,payload:n}),M.a"
+		]
+	},
+	"/api/v2/race/": {
+		"samples": [
+			"on(t){e({type:c,payload:t})}),(function(e){console.warn(e)}),(function(){}))}},T=function(e){return function(t){Object(E.b)(\"/api/v2/race/\".concat(e),{method:\"get\",apiScope:\"fetchRaceData\"},t).then((function(e){t(function(e){return{type:l,payload:e}}"
+		]
+	},
+	"/api/v2/race/save-qualifying": {
+		"samples": [
+			"ethod:\"post\"},(function(){return null})).then((function(){return null}))}},qe=function(e,t){return function(n){Object(Le.b)(\"/api/v2/race/save-qualifying\",{method:\"post\",params:{speed:e,accuracy:t},uhash:!0,apiScope:\"setQualifyingInfo\"},n).then((func"
+		]
+	},
+	"/api/v2/rewards/daily": {
+		"samples": [
+			"f:return E(e,t.payload)}return e},S=n(2),_=n(9),T=n(8),C=n.n(T),N=n(7),A=(n(10),function(){return function(e,t){Object(S.b)(\"/api/v2/rewards/daily\",{method:\"get\"},e).then((function(n){if(n.reward){var r=\"never\",o=t().user.lastMysteryBoxClaimed;o&&(r="
+		]
+	},
+	"/api/v2/settings": {
+		"samples": [
+			"rguments[1]:void 0;switch(t.type){case a:return h(e,t.payload)}return e},g=n(2),v=function(){return function(e){Object(g.b)(\"/api/v2/settings\",{method:\"get\",apiScope:\"fetchUserSettings\"},e).then((function(t){e(function(e){return{type:a,payload:e}}(t)"
+		]
+	},
+	"/api/v2/settings/account": {
+		"samples": [
+			" null}))}},w=function(e,t,n,r,o){return function(a){var i={firstname:e,lastname:t,email:n,contact:r,password:o};Object(g.b)(\"/api/v2/settings/account\",{method:\"post\",params:i,apiScope:\"accountUpdate\"},a).then((function(e){a(function(e){return{type:s,"
+		]
+	},
+	"/api/v2/settings/password": {
+		"samples": [
+			"unction(){return null}))}},S=function(e,t,n){return function(r){var o={password:e,newPassword:t,newPassword2:n};Object(g.b)(\"/api/v2/settings/password\",{method:\"post\",params:o,apiScope:\"passwordUpdate\"},r).then((function(){return null}),(function(){r"
+		]
+	},
+	"/api/v2/settings/profile": {
+		"samples": [
+			"=function(e,t){return function(n){var r={displayName:e,username:t};void 0===r.displayName&&delete r.displayName,Object(g.b)(\"/api/v2/settings/profile\",{method:\"post\",params:r,apiScope:\"profileUpdate\"},n).then((function(e){n(function(e){return{type:i,"
+		]
+	},
+	"/api/v2/settings/remove-sso": {
+		"samples": [
+			"SSOCode\"},e).then((function(){return null}),(function(){return null}))}},C=function(e,t,n,r){return function(o){Object(g.b)(\"/api/v2/settings/remove-sso\",{method:\"post\",params:{code:e,username:t,password:n,password2:r},apiScope:\"removeSSO\"},o).then(("
+		]
+	},
+	"/api/v2/settings/remove-sso-code": {
+		"samples": [
+			"mailValidation\"},e).then((function(){return null}),(function(){return null}))}},T=function(){return function(e){Object(g.b)(\"/api/v2/settings/remove-sso-code\",{method:\"post\",apiScope:\"sendRemoveSSOCode\"},e).then((function(){return null}),(function(){"
+		]
+	},
+	"/api/v2/settings/send-verification-email": {
+		"samples": [
+			"passwordUpdate\"},r).then((function(){return null}),(function(){return null}))}},_=function(){return function(e){Object(g.b)(\"/api/v2/settings/send-verification-email\",{method:\"post\",apiScope:\"resendEmailValidation\"},e).then((function(){return null}),"
+		]
+	},
+	"/api/v2/settings/social": {
+		"samples": [
+			"{return null}))}},O=function(e,t,n){return function(r){var o={offline:e,allowFriendRequests:t,lookingForTeam:n};Object(g.b)(\"/api/v2/settings/social\",{method:\"post\",params:o,apiScope:\"socialSettingsUpdate\"},r).then((function(e){r(function(e){return{t"
+		]
+	},
+	"/api/v2/settings/sounds": {
+		"samples": [
+			"ifying info. Please try logging out and back in to fix it.\")}))}},Ge=function(e){return function(t){t(xe.v(e)),Object(Le.b)(\"/api/v2/settings/sounds\",{method:\"post\",params:{value:e},apiScope:\"updateSoundPreferences\"},t).then((function(){}),(function("
+		]
+	},
+	"/api/v2/settings/world": {
+		"samples": [
+			"(e){a(function(e){return{type:s,payload:e}}(e))}),(function(){return null}))}},E=function(e){return function(t){Object(g.b)(\"/api/v2/settings/world\",{method:\"post\",params:{worldID:e},apiScope:\"updateWorld\"},t).then((function(e){t(function(e){return{t"
+		]
+	},
+	"/api/v2/stats/data/": {
+		"samples": [
+			"&&void 0!==arguments[1]?arguments[1]:0,n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:30;return function(r){var o=\"/api/v2/stats/data/\".concat(e,\"?page=\").concat(t,\"&limit=\").concat(n);Object(E.b)(o,{method:\"get\",apiScope:\"fetchRaceLogs\"},r"
+		]
+	},
+	"/api/v2/stats/graphs/": {
+		"samples": [
+			"ase u:return v(e,t.payload)}return e},w=function(e){return{type:s,payload:e}},E=n(2),O=function(e){return function(t){var n=\"/api/v2/stats/graphs/\".concat(e);Object(E.b)(n,{method:\"get\",apiScope:\"fetchStatsChart\"},t).then((function(e){t(function(e){r"
+		]
+	},
+	"/api/v2/stats/summary": {
+		"samples": [
+			"nction(e){r(w(e))}),(function(e){console.error(\"error fetching racelog\",e)}))}},_=function(){return function(e){Object(E.b)(\"/api/v2/stats/summary\",{},e).then((function(t){e({type:c,payload:t})}),(function(e){console.warn(e)}),(function(){}))}},T=fun"
+		]
+	},
+	"/api/v2/team-applications/": {
+		"samples": [
+			"(function(e){return{type:v,payload:e}}(t))}),(function(){return null}))}},ce=function(e,t){return function(n,r){Object(X.b)(\"/api/v2/team-applications/\".concat(t,\"/accept\"),{method:\"post\",apiScope:\"denyTeamApplication\"},n).then((function(r){n(functio",
+			".trackEvent(\"teams\",\"join\",\"approve\",null)}),(function(){return null}))}},le=function(e,t){return function(t,n){Object(X.b)(\"/api/v2/team-applications/\".concat(e,\"/deny\"),{method:\"post\",apiScope:\"denyTeamApplication\"},t).then((function(n){t(function("
+		]
+	},
+	"/api/v2/team-applications/accept-all": {
+		"samples": [
+			"trackEvent(\"teams\",\"join\",\"rejected\",null)}),(function(){return null}))}},ue=function(e,t){return function(n,r){Object(X.b)(\"/api/v2/team-applications/accept-all\",{method:\"post\",apiScope:\"acceptAllTeamApplications\"},n).then((function(r){n(function(e)"
+		]
+	},
+	"/api/v2/team-applications/deny-all": {
+		"samples": [
+			"ckEvent(\"teams\",\"join\",\"bulk accepted\",null)}),(function(){return null}))}},pe=function(e){return function(e,t){Object(X.b)(\"/api/v2/team-applications/deny-all\",{method:\"post\",apiScope:\"denyAllTeamApplications\"},e).then((function(t){e(function(e){ret"
+		]
+	},
+	"/api/v2/team-members/": {
+		"samples": [
+			"rackEvent(\"teams\",\"join\",\"bulk rejected\",null)}),(function(){return null}))}},fe=function(e){return function(t){Object(X.b)(\"/api/v2/team-members/\".concat(e,\"/promote\"),{method:\"post\",apiScope:\"promoteToOfficer\"},t).then((function(n){t(function(e){re",
+			"vent(\"teams\",\"user management\",\"promote\",null)}),(function(){return null}))}},de=function(e){return function(t){Object(X.b)(\"/api/v2/team-members/\".concat(e,\"/demote\"),{method:\"post\",apiScope:\"demoteToMember\"},t).then((function(n){t(function(e){retur",
+			"Event(\"teams\",\"user management\",\"demote\",null)}),(function(){return null}))}},me=function(e){return function(t){Object(X.b)(\"/api/v2/team-members/\".concat(e,\"/kick\"),{method:\"post\",apiScope:\"removeMember\"},t).then((function(n){t(function(e){return{ty"
+		]
+	},
+	"/api/v2/teams/": {
+		"samples": [
+			"ope:\"teamSearch\"},r).then((function(e){r(W(e))}),(function(){return null}))}},ne=function(e){return function(t){Object(X.b)(\"/api/v2/teams/\".concat(e,\"/ignore-invite\"),{method:\"post\",apiScope:\"ignoreTeamInvite\"},t).then((function(n){t(function(e){ret",
+			"n){t(function(e){return{type:i,payload:e}}(e))}),(function(){return null}))}},re=function(e){return function(t){Object(X.b)(\"/api/v2/teams/\".concat(e,\"/accept-invite\"),{method:\"post\",apiScope:\"acceptTeamInvite\"},t).then((function(e){t(function(e){ret",
+			"ngth>1&&void 0!==arguments[1]&&arguments[1],n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],r=t?\"/api/v2/classes\":\"/api/v2/teams/\".concat(e),o={};return n&&(o.isMember=1),function(e){Object(X.b)(r,{method:\"get\",params:o,apiScope:\"fetchDetai",
+			"\"fetchDetails\"},e).then((function(t){e(Y(t))}),(function(){return null}))}},ie=function(e){return function(t,n){Object(X.b)(\"/api/v2/teams/\".concat(e,\"/apply\"),{method:\"post\",apiScope:\"applyForTeam\"},t).then((function(n){\"applied\"===n.status?t(functi",
+			"\"team-motd-last-updated\":e}),n({type:f,payload:t})}),(function(){return null}))}},ye=function(e,t){return function(n){var r=\"/api/v2/teams/\".concat(e,\"/invite\");Object(X.b)(r,{method:\"post\"},(function(){return null})).then((function(){K.a.trackEvent("
+		]
+	},
+	"/api/v2/teams/applications": {
+		"samples": [
+			"n)),K.a.trackEvent(\"teams\",\"join\",\"apply\",null)}),(function(){return null}))}},se=function(){return function(e){Object(X.b)(\"/api/v2/teams/applications\",{method:\"get\",apiScope:\"fetchApplications\"},e).then((function(t){e(function(e){return{type:v,payl"
+		]
+	},
+	"/api/v2/teams/boost": {
+		"samples": [
+			"{type:g,payload:e})}),(function(){return null}))}},we=function(e,t){return e=parseInt(e),function(n,r){r().team;Object(X.b)(\"/api/v2/teams/boost\",{method:\"post\",params:{boostID:e,teamMotdID:t},apiScope:\"addMotdBoost\"},n).then((function(){K.a.trackEve"
+		]
+	},
+	"/api/v2/teams/create": {
+		"samples": [
+			"{var p={tag:e,name:t,tagColor:n,minRaces:r,minSpeed:o,otherRequirements:a,password:i,enrollment:c,autoRemove:l};Object(X.b)(\"/api/v2/teams/create\",{method:\"post\",params:p,apiScope:\"createTeam\"},u).then((function(e){var t,n=parseInt(e.teamID);u((t=$($"
+		]
+	},
+	"/api/v2/teams/disband": {
+		"samples": [
+			"nt(\"teams\",\"disband\",\"members-\".concat(r.members.length,\" age-\").concat(Z()().unix()-r.info.createdStamp),null),Object(X.b)(\"/api/v2/teams/disband\",{method:\"post\",params:{password:e},apiScope:\"disbandTeam\"},t).then((function(){var e;t({type:g,payload"
+		]
+	},
+	"/api/v2/teams/leave": {
+		"samples": [
+			"rn e.userID===o}));a&&(r=Z()().unix()-a.joinStamp),K.a.trackEvent(\"teams\",\"leave\",\"timeOnTeam-\".concat(r),null),Object(X.b)(\"/api/v2/teams/leave\",{method:\"post\",apiScope:\"leaveTeam\"},e).then((function(t){e(function(e){return{type:l,payload:e}}(t))}),"
+		]
+	},
+	"/api/v2/teams/motd": {
+		"samples": [
+			"gement\",\"remove\",null)}),(function(){return null}))}},he=function(e,t){return function(n,r){var o=r().team.motd;Object(X.b)(\"/api/v2/teams/motd\",{method:\"post\",params:{message:e},apiScope:\"updateMOTD\"},n).then((function(){var e=\"never\";Array.isArray("
+		]
+	},
+	"/api/v2/teams/search": {
+		"samples": [
+			"d 0!==arguments[1]?arguments[1]:0,n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:0;return function(r){Object(X.b)(\"/api/v2/teams/search\",{method:\"post\",params:{invites:e?1:0,racesPlayed:t,speed:n},apiScope:\"teamSearch\"},r).then((function(e)"
+		]
+	},
+	"/api/v2/teams/update": {
+		"samples": [
+			"{var u={tag:e,name:t,tagColor:n,minRaces:r,minSpeed:o,otherRequirements:a,password:i,enrollment:s,autoRemove:c};Object(X.b)(\"/api/v2/teams/update\",{method:\"post\",params:u,apiScope:\"editTeam\"},l).then((function(t){l({type:y,payload:{tag:e,tagColor:n}}"
+		]
+	}
+}
