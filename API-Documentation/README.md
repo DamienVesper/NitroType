@@ -1,8 +1,6 @@
 # NitroType API Docs
 Documentation for the unofficial NitroType API
 
-# OLD README (12/14/21, `Ray-Adams/NitroType-API-Docs`)
-
 ----
 
 ## Base URL
@@ -14,18 +12,16 @@ Documentation for the unofficial NitroType API
 
   * [Achievements](#achievements)
   * [Auth](#auth)
-  * [Cars](#cars)
   * [Classes](#classes)
   * [Friends](#friends)
-  * [Items](#items)
+  * [Loot](#loot)
   * [News](#news)
   * [Players](#players)
-  * [Purchase](#purchase)
+  * [Payments](#payments)
   * [Race](#race)
   * [Rewards](#rewards)
-  * [Scoreboard](#scoreboard)
+  * [Leaderboards](#leaderboards)
   * [Settings](#settings)
-  * [Shop](#shop)
   * [Stats](#stats)
   * [Teams](#teams)
 
@@ -37,57 +33,31 @@ Documentation for the unofficial NitroType API
 ### <code>v2/achievements/check</code>
 ???
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"???"</code></td>
-	</tr>
-</table>
+| method |
+| :---: |
+| POST |
 
 **Params:** ids
 
 ### <code>v2/achievements/claim/\<achievementID></code>
 Claim an achievement.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>GET</td>
-		<td><code>true</code></td>
-		<td><code>"claimAchievement"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| GET | claimAchievement |
 
 ### <code>v2/achievements/extra</code>
 ???
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"???"</code></td>
-	</tr>
-</table>
+| method |
+| :---: |
+| POST |
 
 **Params:** id
 
 ## Auth
   * [`v2/auth/class-login/<sectionID>`](#v2authclass-loginsectionid)
+  * [`v2/auth/cross-site/<appName>`](#v2authcross-siteappname)
   * [`v2/auth/login/<???>`](#v2authlogin)
   * [`v2/auth/login/username`](#v2authloginusername)
   * [`v2/auth/redirect/<facebook|google|clever>`](#v2authredirectfacebookgoogleclever)
@@ -100,1165 +70,637 @@ Claim an achievement.
 ### <code>v2/auth/class-login/\<sectionID></code>
 Login to a class.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>false</code></td>
-		<td><code>"logInToClass"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| POST | logInToClass |
 
 **Params:** sectionID
+
+### <code>v2/auth/cross-site/\<appName></code>
+???
+
+| method |
+| :---: |
+| GET |
+
+**Params:** redirect
 
 ### <code>v2/auth/login/\<???></code>
 ???
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>false</code></td>
-		<td><code>"login"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| POST | login |
 
-**Params:** ???, ...
+**Params:** ???
 
 ### <code>v2/auth/login/username</code>
 Login to an account.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>false</code></td>
-		<td><code>"login"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| POST | login |
 
 **Params:** username, password, captchaToken, tz
 
 ### <code>v2/auth/redirect/\<facebook|google|clever></code>
 Redirect to third-party login.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>GET</td>
-		<td><code>false</code></td>
-		<td><code>"???"</code></td>
-	</tr>
-</table>
+| method |
+| :---: |
+| GET |
 
 ### <code>v2/auth/register/username</code>
 Register (and qualify) an account.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>false</code></td>
-		<td><code>"signup"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| POST | signup |
 
 **Params:** username, password, email, acceptPolicy, receiveContact, tz, qualifying, avgSpeed, avgAcc, carID, raceSounds
 
 ### <code>v2/auth/reset-password</code>
 Reset an account's password.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>false</code></td>
-		<td><code>"forgotPassword"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| POST | forgotPassword |
 
 **Params:** email
 
 ### <code>v2/auth/reset-password/change</code>
 Reset an account's password.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"resetPassword"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| POST | resetPassword |
 
 **Params:** newPassword, newPassword2, userID, hash
 
 ### <code>v2/auth/validate-captcha</code>
 Submit a captcha user response token.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>false</code></td>
-		<td><code>"validateCaptcha"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| POST | validateCaptcha |
 
 **Params:** token
 
 ### <code>v2/auth/validate-email</code>
 Verify an account's email address.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"validateEmail"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| POST | validateEmail |
 
 **Params:** hash, userID
 
-## Cars
-  * [`cars/arrange`](#carsarrange)
-
-### <code>cars/arrange</code>
-Rearrange cars or add/remove garage sections.
-
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"???"</code></td>
-	</tr>
-</table>
-
-**Params:** garage
-
 ## Classes
-  * [`class/motd`](#classmotd)
-  * [`classes`](#classes)
+  * [`v2/classes`](#v2classes)
 
-### <code>class/motd</code>
-Post a message of the day (motd).
-
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"updateMOTD"</code></td>
-	</tr>
-</table>
-
-**Params:** message
-
-### <code>classes</code>
+### <code>v2/classes</code>
 ???
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>GET</td>
-		<td><code>true</code></td>
-		<td><code>"fetchDetails"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| GET | fetchDetails |
 
-**Params:** ???: {}
+**Params:** isMember
 
 ## Friends
-  * [`friend-requests/<userID>/accept`](#friend-requestsuseridaccept)
-  * [`friend-requests/<userID>/deny`](#friend-requestsuseriddeny)
-  * [`friend-requests/accept-all`](#friend-requestsaccept-all)
-  * [`friend-requests/deny-all`](#friend-requestsdeny-all)
-  * [`friends`](#friends)
-  * [`friends/<userID>/delete`](#friendsuseriddelete)
-  * [`friends/<userID>/request`](#friendsuseridrequest)
-  * [`friends/<userID>/sendcash`](#friendsuseridsendcash)
+  * [`v2/friend-requests`](#v2friend-requests)
+  * [`v2/friend-requests/<userID>/accept`](#v2friend-requestsuseridaccept)
+  * [`v2/friend-requests/<userID>/deny`](#v2friend-requestsuseriddeny)
+  * [`v2/friend-requests/<userID>/request`](#v2friend-requestsuseridrequest)
+  * [`v2/friend-requests/accept-all`](#v2friend-requestsaccept-all)
+  * [`v2/friend-requests/deny-all`](#v2friend-requestsdeny-all)
+  * [`v2/friends`](#v2friends)
+  * [`v2/friends/<userID>`](#v2friendsuserid)
 
-### <code>friend-requests/\<userID>/accept</code>
+### <code>v2/friend-requests</code>
+Fetch incoming friend requests.
+
+| method | apiScope |
+| :---: | :---: |
+| GET | getRequests |
+
+**Params:** r
+
+### <code>v2/friend-requests/\<userID>/accept</code>
 Accept a friend request.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"acceptRequest"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| POST | acceptRequest |
 
-### <code>friend-requests/\<userID>/deny</code>
-Deny a friend request.
+### <code>v2/friend-requests/\<userID>/deny</code>
+Ignore a friend request.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"ignoreRequest"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| POST | ignoreRequest |
 
-### <code>friend-requests/accept-all</code>
-Accept all friend requests.
-
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"acceptAllRequests"</code></td>
-	</tr>
-</table>
-
-### <code>friend-requests/deny-all</code>
-Deny all friend requests.
-
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"ignoreAllRequests"</code></td>
-	</tr>
-</table>
-
-### <code>friends</code>
-Fetch friends data.
-
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>GET</td>
-		<td><code>true</code></td>
-		<td><code>"getFriends"</code></td>
-	</tr>
-</table>
-
-### <code>friends/\<userID>/delete</code>
-Remove a friend.
-
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"removeFriend"</code></td>
-	</tr>
-</table>
-
-### <code>friends/\<userID>/request</code>
+### <code>v2/friend-requests/\<userID>/request</code>
 Send a friend request.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"???"</code></td>
-	</tr>
-</table>
+| method |
+| :---: |
+| POST |
 
-### <code>friends/\<userID>/sendcash</code>
-Send cash to a friend.
+### <code>v2/friend-requests/accept-all</code>
+Accept all friend requests.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"sendCash"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| POST | acceptAllRequests |
 
-**Params:** amount, password, playersCash, recipient, feePercent
+### <code>v2/friend-requests/deny-all</code>
+Ignore all friend requests.
 
-## Items
-  * [`items/cash-gifts`](#itemscash-gifts)
-  * [`items/equip-loot`](#itemsequip-loot)
+| method | apiScope |
+| :---: | :---: |
+| POST | ignoreAllRequests |
 
-### <code>items/cash-gifts</code>
-Fetch pending cash gifts.
+### <code>v2/friends</code>
+Fetch friends data.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"getPendingCashGifts"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| GET | getFriends |
 
-### <code>items/equip-loot</code>
+**Params:** r, online
+
+### <code>v2/friends/\<userID></code>
+Remove a friend.
+
+| method | apiScope |
+| :---: | :---: |
+| DELETE | removeFriend |
+
+## Loot
+  * [`v2/loot/arrange-cars`](#v2lootarrange-cars)
+  * [`v2/loot/dealership/<dlID>/buy`](#v2lootdealershipdlidbuy)
+  * [`v2/loot/equip`](#v2lootequip)
+  * [`v2/loot/shop/<srlID>/buy`](#v2lootshopsrlidbuy)
+
+### <code>v2/loot/arrange-cars</code>
+Rearrange cars or add/remove garage sections.
+
+| method |
+| :---: |
+| POST |
+
+### <code>v2/loot/dealership/\<dlID>/buy</code>
+Buy an item from the dealership.
+
+| method | apiScope |
+| :---: | :---: |
+| POST | shopPurchase |
+
+### <code>v2/loot/equip</code>
 Customize cars and loot.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"equipLoot"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| POST | equipLoot |
 
-**Params:** {Number}[type|id|hueAngle], {Number}[ids][{Number}], ???, ...
+### <code>v2/loot/shop/\<srlID>/buy</code>
+Buy an item from the shop.
+
+| method | apiScope |
+| :---: | :---: |
+| POST | shopPurchase |
 
 ## News
   * [`v2/news`](#v2news)
-  * [`v2/news/<newsPostID>`](#v2newsnewspostid)
+  * [`v2/news/<postID>`](#v2newspostid)
 
 ### <code>v2/news</code>
-Fetch news information.
+Fetch news data.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>GET</td>
-		<td><code>false</code></td>
-		<td><code>"getNews"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| GET | getNews |
 
-### <code>v2/news/\<newsPostID></code>
+**Params:** limit
+
+### <code>v2/news/\<postID></code>
 Fetch a news post.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>GET</td>
-		<td><code>false</code></td>
-		<td><code>"getNewsPost"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| GET | getNewsPost |
 
 ## Players
   * [`v2/players/<userID>/report`](#v2playersuseridreport)
+  * [`v2/players/<userID>/send-cash`](#v2playersuseridsend-cash)
+  * [`v2/players/receive-cash`](#v2playersreceive-cash)
   * [`v2/players/search`](#v2playerssearch)
 
 ### <code>v2/players/\<userID>/report</code>
 Report a player.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"???"</code></td>
-	</tr>
-</table>
+| method |
+| :---: |
+| POST |
+
+### <code>v2/players/\<userID>/send-cash</code>
+Send cash to a player.
+
+| method | apiScope |
+| :---: | :---: |
+| POST | sendCash |
+
+**Params:** amount, password
+
+### <code>v2/players/receive-cash</code>
+Fetch pending cash gifts.
+
+| method | apiScope |
+| :---: | :---: |
+| POST | getPendingCashGifts |
 
 ### <code>v2/players/search</code>
 Search for users.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"searchUsers"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| POST | searchUsers |
 
 **Params:** term
 
-## Purchase
-  * [`purchase/create-session`](#purchasecreate-session)
-  * [`purchase/validate-user-product`](#purchasevalidate-user-product)
-  * [`purchase/verify-purchase`](#purchaseverify-purchase)
+## Payments
+  * [`v2/payments/create-session`](#v2paymentscreate-session)
+  * [`v2/payments/products`](#v2paymentsproducts)
+  * [`v2/payments/transaction`](#v2paymentstransaction)
 
-### <code>purchase/create-session</code>
+### <code>v2/payments/create-session</code>
 Start a purchase session.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"beginPurchase"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| POST | beginPurchase |
 
 **Params:** username, SKU, purchaseMethod
 
-### <code>purchase/validate-user-product</code>
+### <code>v2/payments/products</code>
 ???
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"validateUserProduct"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| POST | validateUserProduct |
 
 **Params:** username, type
 
-### <code>purchase/verify-purchase</code>
+### <code>v2/payments/transaction</code>
 ???
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"refreshUserSessionAfterStripePurchase"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| POST | refreshUserSessionAfterStripePurchase |
 
-**Params:** invoiceNum, userID
+**Params:** userID
 
 ## Race
   * [`v2/race/<raceID>`](#v2raceraceid)
-  * [`v2/race/challenge`](#v2racechallenge)
   * [`v2/race/save-qualifying`](#v2racesave-qualifying)
 
 ### <code>v2/race/\<raceID></code>
 Fetch race data.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>GET</td>
-		<td><code>true</code></td>
-		<td><code>"fetchRaceData"</code></td>
-	</tr>
-</table>
-
-### <code>v2/race/challenge</code>
-???
-
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"completeChallengeRace"</code></td>
-	</tr>
-</table>
-
-**Params:** wins, seconds, lessonID
+| method | apiScope |
+| :---: | :---: |
+| GET | fetchRaceData |
 
 ### <code>v2/race/save-qualifying</code>
 Save qualifying information (on account registration).
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>false</code></td>
-		<td><code>"setQualifyingInfo"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| POST | setQualifyingInfo |
 
 **Params:** speed, accuracy
 
 ## Rewards
-  * [`rewards/daily`](#rewardsdaily)
+  * [`v2/rewards/daily`](#v2rewardsdaily)
 
-### <code>rewards/daily</code>
+### <code>v2/rewards/daily</code>
 Claim daily reward.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>GET</td>
-		<td><code>true</code></td>
-		<td><code>"???"</code></td>
-	</tr>
-</table>
+| method |
+| :---: |
+| GET |
 
-## Scoreboard
-  * [`scoreboard`](#scoreboard)
+## Leaderboards
+  * [`v2/leaderboards`](#v2leaderboards)
 
-### <code>scoreboard</code>
-Fetch data from the scoreboard.
+### <code>v2/leaderboards</code>
+Fetch leaderboard data.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>GET</td>
-		<td><code>false</code></td>
-		<td><code>"???"</code></td>
-	</tr>
-</table>
+| method |
+| :---: |
+| GET |
 
 **Params:** board, time, grouping, seasonID
 
 ## Settings
-  * [`settings`](#settings)
-  * [`settings/account`](#settingsaccount)
-  * [`settings/password`](#settingspassword)
-  * [`settings/profile`](#settingsprofile)
-  * [`settings/remove-sso`](#settingsremove-sso)
-  * [`settings/remove-sso-code`](#settingsremove-sso-code)
-  * [`settings/social`](#settingssocial)
-  * [`settings/sounds`](#settingssounds)
-  * [`settings/username`](#settingsusername)
-  * [`settings/verify-email`](#settingsverify-email)
-  * [`settings/world`](#settingsworld)
+  * [`v2/settings`](#v2settings)
+  * [`v2/settings/account`](#v2settingsaccount)
+  * [`v2/settings/password`](#v2settingspassword)
+  * [`v2/settings/profile`](#v2settingsprofile)
+  * [`v2/settings/remove-sso`](#v2settingsremove-sso)
+  * [`v2/settings/remove-sso-code`](#v2settingsremove-sso-code)
+  * [`v2/settings/send-verification-email`](#v2settingssend-verification-email)
+  * [`v2/settings/social`](#v2settingssocial)
+  * [`v2/settings/sounds`](#v2settingssounds)
+  * [`v2/settings/world`](#v2settingsworld)
 
-### <code>settings</code>
+### <code>v2/settings</code>
 Fetch user settings.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>GET</td>
-		<td><code>true</code></td>
-		<td><code>"fetchUserSettings"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| GET | fetchUserSettings |
 
-### <code>settings/account</code>
+### <code>v2/settings/account</code>
 Update account.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"accountUpdate"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| POST | accountUpdate |
 
 **Params:** firstname, lastname, email, contact, password
 
-### <code>settings/password</code>
+### <code>v2/settings/password</code>
 Change password.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"passwordUpdate"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| POST | passwordUpdate |
 
 **Params:** password, newPassword, newPassword2
 
-### <code>settings/profile</code>
+### <code>v2/settings/profile</code>
 Update profile.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"profileUpdate"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| POST | profileUpdate |
 
 **Params:** displayName, username
 
-### <code>settings/remove-sso</code>
+### <code>v2/settings/remove-sso</code>
 ???
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"removeSSO"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| POST | removeSSO |
 
 **Params:** code, username, password, password2
 
-### <code>settings/remove-sso-code</code>
+### <code>v2/settings/remove-sso-code</code>
 ???
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"sendRemoveSSOCode"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| POST | sendRemoveSSOCode |
 
-### <code>settings/social</code>
+### <code>v2/settings/send-verification-email</code>
+Resend verification email.
+
+| method | apiScope |
+| :---: | :---: |
+| POST | resendEmailValidation |
+
+### <code>v2/settings/social</code>
 Update social settings.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"socialSettingsUpdate"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| POST | socialSettingsUpdate |
 
 **Params:** offline, allowFriendRequests, lookingForTeam
 
-### <code>settings/sounds</code>
+### <code>v2/settings/sounds</code>
 Update sound preferences.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"updateSoundPreferences"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| POST | updateSoundPreferences |
 
 **Params:** value
 
-### <code>settings/username</code>
-Change username.
-
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"updateUsername"</code></td>
-	</tr>
-</table>
-
-**Params:** username
-
-### <code>settings/verify-email</code>
-Resend verification email.
-
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"resendEmailValidation"</code></td>
-	</tr>
-</table>
-
-### <code>settings/world</code>
+### <code>v2/settings/world</code>
 ???
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"updateWorld"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| POST | updateWorld |
 
 **Params:** worldID
 
-## Shop
-  * [`dealership/<dlID>/buy`](#dealershipdlidbuy)
-  * [`shop/<dlID>/buy`](#shopdlidbuy)
-
-### <code>dealership/\<dlID>/buy</code>
-Buy an item from the dealership.
-
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"shopPurchase"</code></td>
-	</tr>
-</table>
-
-**Params:** password
-
-### <code>shop/\<dlID>/buy</code>
-Buy an item from the shop.
-
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"shopPurchase"</code></td>
-	</tr>
-</table>
-
-**Params:** password
-
 ## Stats
-  * [`stats/data/<bymonth|lastdays|racelog|topspeeds>`](#statsdatabymonthlastdaysracelogtopspeeds)
-  * [`stats/graphs/<bymonth|lastdays|racelog|topspeeds>`](#statsgraphsbymonthlastdaysracelogtopspeeds)
-  * [`stats/summary`](#statssummary)
+  * [`v2/stats/data/<bymonth|lastdays|racelog|topspeeds>`](#v2statsdatabymonthlastdaysracelogtopspeeds)
+  * [`v2/stats/graphs/<bymonth|lastdays|racelog|topspeeds>`](#v2statsgraphsbymonthlastdaysracelogtopspeeds)
+  * [`v2/stats/summary`](#v2statssummary)
 
-### <code>stats/data/\<bymonth|lastdays|racelog|topspeeds></code>
+### <code>v2/stats/data/\<bymonth|lastdays|racelog|topspeeds></code>
 Fetch racelog data.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>GET</td>
-		<td><code>true</code></td>
-		<td><code>"fetchRaceLogs"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| GET | fetchRaceLogs |
 
 **Params:** limit, page
 
-### <code>stats/graphs/\<bymonth|lastdays|racelog|topspeeds></code>
-???
+### <code>v2/stats/graphs/\<bymonth|lastdays|racelog|topspeeds></code>
+Fetch stats chart.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>GET</td>
-		<td><code>true</code></td>
-		<td><code>"fetchStatsChart"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| GET | fetchStatsChart |
 
-### <code>stats/summary</code>
+### <code>v2/stats/summary</code>
 Fetch stats summary data.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>GET</td>
-		<td><code>true</code></td>
-		<td><code>"???"</code></td>
-	</tr>
-</table>
+| method |
+| :---: |
+| GET |
 
 ## Teams
-  * [`teams/<tag>`](#teamstag)
-  * [`teams/<teamID>/accept-invite`](#teamsteamidaccept-invite)
-  * [`teams/<teamID>/apply`](#teamsteamidapply)
-  * [`teams/<teamID>/ignore-invite`](#teamsteamidignore-invite)
-  * [`teams/<userID>/invite`](#teamsuseridinvite)
-  * [`teams/applications`](#teamsapplications)
-  * [`teams/boost`](#teamsboost)
-  * [`teams/create`](#teamscreate)
-  * [`teams/delete`](#teamsdelete)
-  * [`teams/leave`](#teamsleave)
-  * [`teams/motd`](#teamsmotd)
-  * [`teams/search`](#teamssearch)
-  * [`teams/update`](#teamsupdate)
+  * [`v2/team-applications/<userID>/accept`](#v2team-applicationsuseridaccept)
+  * [`v2/team-applications/<userID>/deny`](#v2team-applicationsuseriddeny)
+  * [`v2/team-applications/accept-all`](#v2team-applicationsaccept-all)
+  * [`v2/team-applications/deny-all`](#v2team-applicationsdeny-all)
+  * [`v2/team-members/<userID>/demote`](#v2team-membersuseriddemote)
+  * [`v2/team-members/<userID>/kick`](#v2team-membersuseridkick)
+  * [`v2/team-members/<userID>/promote`](#v2team-membersuseridpromote)
+  * [`v2/teams/<tag>`](#v2teamstag)
+  * [`v2/teams/<teamID>/accept-invite`](#v2teamsteamidaccept-invite)
+  * [`v2/teams/<teamID>/apply`](#v2teamsteamidapply)
+  * [`v2/teams/<teamID>/ignore-invite`](#v2teamsteamidignore-invite)
+  * [`v2/teams/<userID>/invite`](#v2teamsuseridinvite)
+  * [`v2/teams/applications`](#v2teamsapplications)
+  * [`v2/teams/boost`](#v2teamsboost)
+  * [`v2/teams/create`](#v2teamscreate)
+  * [`v2/teams/disband`](#v2teamsdisband)
+  * [`v2/teams/leave`](#v2teamsleave)
+  * [`v2/teams/motd`](#v2teamsmotd)
+  * [`v2/teams/search`](#v2teamssearch)
+  * [`v2/teams/update`](#v2teamsupdate)
 
-### <code>teams/\<tag></code>
-Fetch information from a team.
+### <code>v2/team-applications/\<userID>/accept</code>
+Accept a team application.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>GET</td>
-		<td><code>true</code></td>
-		<td><code>"fetchDetails"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| POST | acceptTeamApplication |
 
-### <code>teams/\<teamID>/accept-invite</code>
+### <code>v2/team-applications/\<userID>/deny</code>
+Deny a team application.
+
+| method | apiScope |
+| :---: | :---: |
+| POST | denyTeamApplication |
+
+### <code>v2/team-applications/accept-all</code>
+Accept all team applications.
+
+| method | apiScope |
+| :---: | :---: |
+| POST | acceptAllTeamApplications |
+
+### <code>v2/team-applications/deny-all</code>
+Deny all team applications.
+
+| method | apiScope |
+| :---: | :---: |
+| POST | denyAllTeamApplications |
+
+### <code>v2/team-members/\<userID>/demote</code>
+Demote a team officer to member.
+
+| method | apiScope |
+| :---: | :---: |
+| POST | demoteToMember |
+
+### <code>v2/team-members/\<userID>/kick</code>
+Kick a team member.
+
+| method | apiScope |
+| :---: | :---: |
+| POST | removeMember |
+
+### <code>v2/team-members/\<userID>/promote</code>
+Promote a team member to officer.
+
+| method | apiScope |
+| :---: | :---: |
+| POST | promoteToOfficer |
+
+### <code>v2/teams/\<tag></code>
+Fetch team data.
+
+| method | apiScope |
+| :---: | :---: |
+| GET | fetchDetails |
+
+**Params:** isMember
+
+### <code>v2/teams/\<teamID>/accept-invite</code>
 Accept a team invite.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"acceptTeamInvite"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| POST | acceptTeamInvite |
 
-### <code>teams/\<teamID>/apply</code>
+### <code>v2/teams/\<teamID>/apply</code>
 Apply for a team.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"applyForTeam"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| POST | applyForTeam |
 
-### <code>teams/\<teamID>/ignore-invite</code>
+### <code>v2/teams/\<teamID>/ignore-invite</code>
 Ignore a team invite.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"ignoreTeamInvite"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| POST | ignoreTeamInvite |
 
-### <code>teams/\<userID>/invite</code>
-Send a team invite.
+### <code>v2/teams/\<userID>/invite</code>
+Send a team invite to a player.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"???"</code></td>
-	</tr>
-</table>
+| method |
+| :---: |
+| POST |
 
-### <code>teams/applications</code>
+### <code>v2/teams/applications</code>
 Fetch team applications.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>GET</td>
-		<td><code>true</code></td>
-		<td><code>"fetchApplications"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| GET | fetchApplications |
 
-### <code>teams/boost</code>
+**Params:** r
+
+### <code>v2/teams/boost</code>
 Add a reaction (boost) to a motd.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"addMotdBoost"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| POST | addMotdBoost |
 
 **Params:** boostID, teamMotdID
 
-### <code>teams/create</code>
+### <code>v2/teams/create</code>
 Create a team.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"createTeam"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| POST | createTeam |
 
 **Params:** tag, name, tagColor, minRaces, minSpeed, otherRequirements, password, enrollment, autoRemove
 
-### <code>teams/delete</code>
-Delete a team.
+### <code>v2/teams/disband</code>
+Disband a team.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"disbandTeam"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| POST | disbandTeam |
 
 **Params:** password
 
-### <code>teams/leave</code>
+### <code>v2/teams/leave</code>
 Leave a team.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"leaveTeam"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| POST | leaveTeam |
 
-### <code>teams/motd</code>
+### <code>v2/teams/motd</code>
 Post a message of the day (motd).
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"updateMOTD"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| POST | updateMOTD |
 
 **Params:** message
 
-### <code>teams/search</code>
+### <code>v2/teams/search</code>
 Search for teams.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>GET</td>
-		<td><code>true</code></td>
-		<td><code>"teamSearch"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| GET | teamSearch |
 
 **Params:** invites, racesPlayed, speed
 
-### <code>teams/update</code>
+### <code>v2/teams/update</code>
 Update a team.
 
-<table>
-	<tr>
-		<th>method</th>
-		<th>uhash</th>
-		<th>apiScope</th>
-	</tr>
-	<tr>
-		<td>POST</td>
-		<td><code>true</code></td>
-		<td><code>"editTeam"</code></td>
-	</tr>
-</table>
+| method | apiScope |
+| :---: | :---: |
+| POST | editTeam |
 
 **Params:** tag, name, tagColor, minRaces, minSpeed, otherRequirements, password, enrollment, autoRemove
-
-----
