@@ -1,0 +1,680 @@
+{
+  "achievements": [
+    {
+      "endpoint": "v2/achievements/check",
+      "description": "???",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "???",
+      "parameters": [
+        "ids"
+      ]
+    },
+    {
+      "endpoint": "v2/achievements/claim/<achievementID>",
+      "description": "Claim an achievement.",
+      "method": "GET",
+      "uhash": "true",
+      "apiScope": "claimAchievement"
+    },
+    {
+      "endpoint": "v2/achievements/extra",
+      "description": "???",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "???",
+      "parameters": [
+        "id"
+      ]
+    }
+  ],
+  "auth": [
+    {
+      "endpoint": "v2/auth/class-login/<sectionID>",
+      "description": "Login to a class.",
+      "method": "POST",
+      "uhash": "false",
+      "apiScope": "logInToClass",
+      "parameters": [
+        "sectionID"
+      ]
+    },
+    {
+      "endpoint": "v2/auth/login/<???>",
+      "description": "???",
+      "method": "POST",
+      "uhash": "false",
+      "apiScope": "login",
+      "parameters": [
+        "???",
+        "..."
+      ]
+    },
+    {
+      "endpoint": "v2/auth/login/username",
+      "description": "Login to an account.",
+      "method": "POST",
+      "uhash": "false",
+      "apiScope": "login",
+      "parameters": [
+        "username",
+        "password",
+        "captchaToken",
+        "tz"
+      ]
+    },
+    {
+      "endpoint": "v2/auth/redirect/<facebook|google|clever>",
+      "description": "Redirect to third-party login.",
+      "method": "GET",
+      "uhash": "false",
+      "apiScope": "???"
+    },
+    {
+      "endpoint": "v2/auth/register/username",
+      "description": "Register (and qualify) an account.",
+      "method": "POST",
+      "uhash": "false",
+      "apiScope": "signup",
+      "parameters": [
+        "username",
+        "password",
+        "email",
+        "acceptPolicy",
+        "receiveContact",
+        "tz",
+        "qualifying",
+        "avgSpeed",
+        "avgAcc",
+        "carID",
+        "raceSounds"
+      ]
+    },
+    {
+      "endpoint": "v2/auth/reset-password",
+      "description": "Reset an account's password.",
+      "method": "POST",
+      "uhash": "false",
+      "apiScope": "forgotPassword",
+      "parameters": [
+        "email"
+      ]
+    },
+    {
+      "endpoint": "v2/auth/reset-password/change",
+      "description": "Reset an account's password.",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "resetPassword",
+      "parameters": [
+        "newPassword",
+        "newPassword2",
+        "userID",
+        "hash"
+      ]
+    },
+    {
+      "endpoint": "v2/auth/validate-captcha",
+      "description": "Submit a captcha user response token.",
+      "method": "POST",
+      "uhash": "false",
+      "apiScope": "validateCaptcha",
+      "parameters": [
+        "token"
+      ]
+    },
+    {
+      "endpoint": "v2/auth/validate-email",
+      "description": "Verify an account's email address.",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "validateEmail",
+      "parameters": [
+        "hash",
+        "userID"
+      ]
+    }
+  ],
+  "cars": [
+    {
+      "endpoint": "cars/arrange",
+      "description": "Rearrange cars or add/remove garage sections.",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "???",
+      "parameters": [
+        "garage"
+      ]
+    }
+  ],
+  "classes": [
+    {
+      "endpoint": "class/motd",
+      "description": "Post a message of the day (motd).",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "updateMOTD",
+      "parameters": [
+        "message"
+      ]
+    },
+    {
+      "endpoint": "classes",
+      "description": "???",
+      "method": "GET",
+      "uhash": "true",
+      "apiScope": "fetchDetails",
+      "parameters": [
+        "???: {}"
+      ]
+    }
+  ],
+  "friends": [
+    {
+      "endpoint": "friend-requests/<userID>/accept",
+      "description": "Accept a friend request.",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "acceptRequest"
+    },
+    {
+      "endpoint": "friend-requests/<userID>/deny",
+      "description": "Deny a friend request.",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "ignoreRequest"
+    },
+    {
+      "endpoint": "friend-requests/accept-all",
+      "description": "Accept all friend requests.",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "acceptAllRequests"
+    },
+    {
+      "endpoint": "friend-requests/deny-all",
+      "description": "Deny all friend requests.",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "ignoreAllRequests"
+    },
+    {
+      "endpoint": "friends",
+      "description": "Fetch friends data.",
+      "method": "GET",
+      "uhash": "true",
+      "apiScope": "getFriends"
+    },
+    {
+      "endpoint": "friends/<userID>/delete",
+      "description": "Remove a friend.",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "removeFriend"
+    },
+    {
+      "endpoint": "friends/<userID>/request",
+      "description": "Send a friend request.",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "???"
+    },
+    {
+      "endpoint": "friends/<userID>/sendcash",
+      "description": "Send cash to a friend.",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "sendCash",
+      "parameters": [
+        "amount",
+        "password",
+        "playersCash",
+        "recipient",
+        "feePercent"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "endpoint": "items/cash-gifts",
+      "description": "Fetch pending cash gifts.",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "getPendingCashGifts"
+    },
+    {
+      "endpoint": "items/equip-loot",
+      "description": "Customize cars and loot.",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "equipLoot",
+      "parameters": [
+        "{Number}[type|id|hueAngle]",
+        "{Number}[ids][{Number}]",
+        "???",
+        "..."
+      ]
+    }
+  ],
+  "news": [
+    {
+      "endpoint": "v2/news",
+      "description": "Fetch news information.",
+      "method": "GET",
+      "uhash": "false",
+      "apiScope": "getNews"
+    },
+    {
+      "endpoint": "v2/news/<newsPostID>",
+      "description": "Fetch a news post.",
+      "method": "GET",
+      "uhash": "false",
+      "apiScope": "getNewsPost"
+    }
+  ],
+  "players": [
+    {
+      "endpoint": "v2/players/<userID>/report",
+      "description": "Report a player.",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "???"
+    },
+    {
+      "endpoint": "v2/players/search",
+      "description": "Search for users.",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "searchUsers",
+      "parameters": [
+        "term"
+      ]
+    }
+  ],
+  "purchase": [
+    {
+      "endpoint": "purchase/create-session",
+      "description": "Start a purchase session.",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "beginPurchase",
+      "parameters": [
+        "username",
+        "SKU",
+        "purchaseMethod"
+      ]
+    },
+    {
+      "endpoint": "purchase/validate-user-product",
+      "description": "???",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "validateUserProduct",
+      "parameters": [
+        "username",
+        "type"
+      ]
+    },
+    {
+      "endpoint": "purchase/verify-purchase",
+      "description": "???",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "refreshUserSessionAfterStripePurchase",
+      "parameters": [
+        "invoiceNum",
+        "userID"
+      ]
+    }
+  ],
+  "race": [
+    {
+      "endpoint": "v2/race/<raceID>",
+      "description": "Fetch race data.",
+      "method": "GET",
+      "uhash": "true",
+      "apiScope": "fetchRaceData"
+    },
+    {
+      "endpoint": "v2/race/challenge",
+      "description": "???",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "completeChallengeRace",
+      "parameters": [
+        "wins",
+        "seconds",
+        "lessonID"
+      ]
+    },
+    {
+      "endpoint": "v2/race/save-qualifying",
+      "description": "Save qualifying information (on account registration).",
+      "method": "POST",
+      "uhash": "false",
+      "apiScope": "setQualifyingInfo",
+      "parameters": [
+        "speed",
+        "accuracy"
+      ]
+    }
+  ],
+  "rewards": [
+    {
+      "endpoint": "rewards/daily",
+      "description": "Claim daily reward.",
+      "method": "GET",
+      "uhash": "true",
+      "apiScope": "???"
+    }
+  ],
+  "scoreboard": [
+    {
+      "endpoint": "scoreboard",
+      "description": "Fetch data from the scoreboard.",
+      "method": "GET",
+      "uhash": "false",
+      "apiScope": "???",
+      "parameters": [
+        "board",
+        "time",
+        "grouping",
+        "seasonID"
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "endpoint": "settings",
+      "description": "Fetch user settings.",
+      "method": "GET",
+      "uhash": "true",
+      "apiScope": "fetchUserSettings"
+    },
+    {
+      "endpoint": "settings/account",
+      "description": "Update account.",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "accountUpdate",
+      "parameters": [
+        "firstname",
+        "lastname",
+        "email",
+        "contact",
+        "password"
+      ]
+    },
+    {
+      "endpoint": "settings/password",
+      "description": "Change password.",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "passwordUpdate",
+      "parameters": [
+        "password",
+        "newPassword",
+        "newPassword2"
+      ]
+    },
+    {
+      "endpoint": "settings/profile",
+      "description": "Update profile.",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "profileUpdate",
+      "parameters": [
+        "displayName",
+        "username"
+      ]
+    },
+    {
+      "endpoint": "settings/remove-sso",
+      "description": "???",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "removeSSO",
+      "parameters": [
+        "code",
+        "username",
+        "password",
+        "password2"
+      ]
+    },
+    {
+      "endpoint": "settings/remove-sso-code",
+      "description": "???",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "sendRemoveSSOCode"
+    },
+    {
+      "endpoint": "settings/social",
+      "description": "Update social settings.",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "socialSettingsUpdate",
+      "parameters": [
+        "offline",
+        "allowFriendRequests",
+        "lookingForTeam"
+      ]
+    },
+    {
+      "endpoint": "settings/sounds",
+      "description": "Update sound preferences.",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "updateSoundPreferences",
+      "parameters": [
+        "value"
+      ]
+    },
+    {
+      "endpoint": "settings/username",
+      "description": "Change username.",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "updateUsername",
+      "parameters": [
+        "username"
+      ]
+    },
+    {
+      "endpoint": "settings/verify-email",
+      "description": "Resend verification email.",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "resendEmailValidation"
+    },
+    {
+      "endpoint": "settings/world",
+      "description": "???",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "updateWorld",
+      "parameters": [
+        "worldID"
+      ]
+    }
+  ],
+  "shop": [
+    {
+      "endpoint": "dealership/<dlID>/buy",
+      "description": "Buy an item from the dealership.",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "shopPurchase",
+      "parameters": [
+        "password"
+      ]
+    },
+    {
+      "endpoint": "shop/<dlID>/buy",
+      "description": "Buy an item from the shop.",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "shopPurchase",
+      "parameters": [
+        "password"
+      ]
+    }
+  ],
+  "stats": [
+    {
+      "endpoint": "stats/data/<bymonth|lastdays|racelog|topspeeds>",
+      "description": "Fetch racelog data.",
+      "method": "GET",
+      "uhash": "true",
+      "apiScope": "fetchRaceLogs",
+      "parameters": [
+        "limit",
+        "page"
+      ]
+    },
+    {
+      "endpoint": "stats/graphs/<bymonth|lastdays|racelog|topspeeds>",
+      "description": "???",
+      "method": "GET",
+      "uhash": "true",
+      "apiScope": "fetchStatsChart"
+    },
+    {
+      "endpoint": "stats/summary",
+      "description": "Fetch stats summary data.",
+      "method": "GET",
+      "uhash": "true",
+      "apiScope": "???"
+    }
+  ],
+  "teams": [
+    {
+      "endpoint": "teams/<tag>",
+      "description": "Fetch information from a team.",
+      "method": "GET",
+      "uhash": "true",
+      "apiScope": "fetchDetails"
+    },
+    {
+      "endpoint": "teams/<teamID>/accept-invite",
+      "description": "Accept a team invite.",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "acceptTeamInvite"
+    },
+    {
+      "endpoint": "teams/<teamID>/apply",
+      "description": "Apply for a team.",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "applyForTeam"
+    },
+    {
+      "endpoint": "teams/<teamID>/ignore-invite",
+      "description": "Ignore a team invite.",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "ignoreTeamInvite"
+    },
+    {
+      "endpoint": "teams/<userID>/invite",
+      "description": "Send a team invite.",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "???"
+    },
+    {
+      "endpoint": "teams/applications",
+      "description": "Fetch team applications.",
+      "method": "GET",
+      "uhash": "true",
+      "apiScope": "fetchApplications"
+    },
+    {
+      "endpoint": "teams/boost",
+      "description": "Add a reaction (boost) to a motd.",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "addMotdBoost",
+      "parameters": [
+        "boostID",
+        "teamMotdID"
+      ]
+    },
+    {
+      "endpoint": "teams/create",
+      "description": "Create a team.",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "createTeam",
+      "parameters": [
+        "tag",
+        "name",
+        "tagColor",
+        "minRaces",
+        "minSpeed",
+        "otherRequirements",
+        "password",
+        "enrollment",
+        "autoRemove"
+      ]
+    },
+    {
+      "endpoint": "teams/delete",
+      "description": "Delete a team.",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "disbandTeam",
+      "parameters": [
+        "password"
+      ]
+    },
+    {
+      "endpoint": "teams/leave",
+      "description": "Leave a team.",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "leaveTeam"
+    },
+    {
+      "endpoint": "teams/motd",
+      "description": "Post a message of the day (motd).",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "updateMOTD",
+      "parameters": [
+        "message"
+      ]
+    },
+    {
+      "endpoint": "teams/search",
+      "description": "Search for teams.",
+      "method": "GET",
+      "uhash": "true",
+      "apiScope": "teamSearch",
+      "parameters": [
+        "invites",
+        "racesPlayed",
+        "speed"
+      ]
+    },
+    {
+      "endpoint": "teams/update",
+      "description": "Update a team.",
+      "method": "POST",
+      "uhash": "true",
+      "apiScope": "editTeam",
+      "parameters": [
+        "tag",
+        "name",
+        "tagColor",
+        "minRaces",
+        "minSpeed",
+        "otherRequirements",
+        "password",
+        "enrollment",
+        "autoRemove"
+      ]
+    }
+  ]
+}
